@@ -25,9 +25,24 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/fontawesome-all.min.css",
+              "src/assets/css/slick.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/line-awesome.min.css",
+              "src/assets/css/main.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-3.7.1.min.js",
+              "src/assets/js/boostrap.bundle.min.js",
+              "src/assets/js/countdown.js",
+              "src/assets/js/counterup.min.js",
+              "src/assets/js/slick.min.js",
+              "src/assets/js/jquery.magnific-popup.js",
+              "src/assets/js/apexchart.js",
+              "src/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,5 +109,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "535744df-2e11-4ae8-97c7-47a44e06909b"
   }
 }
