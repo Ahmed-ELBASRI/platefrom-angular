@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BottomFooterComponent } from './bottom-footer/bottom-footer.component';
 import { SaleOfferComponent } from './sale-offer/sale-offer.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -15,7 +16,8 @@ import { SaleOfferComponent } from './sale-offer/sale-offer.component';
     SaleOfferComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     HeaderComponent,
