@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-service-item',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./service-item.component.css']
 })
 export class ServiceItemComponent {
-
+  @Input() plan :string="";
 }

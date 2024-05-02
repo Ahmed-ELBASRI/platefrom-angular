@@ -26,6 +26,8 @@ import { ProductsItemComponent } from './all-products/products/products-item/pro
 import { NavbarComponent } from './all-products/products/navbar/navbar.component';
 import { PageNavigationComponent } from './all-products/products/page-navigation/page-navigation.component';
 import { FilterComponent } from './all-products/products/filters/filter/filter.component';
+import { ContactComponent } from './contact/contact.component';
+import { ContactEmailComponent } from './contact/contact-email/contact-email.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,8 @@ import { FilterComponent } from './all-products/products/filters/filter/filter.c
     NavbarComponent,
     PageNavigationComponent,
     FilterComponent,
-
+    ContactComponent,
+    ContactEmailComponent
 
   ],
   imports: [
