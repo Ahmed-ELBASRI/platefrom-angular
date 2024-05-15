@@ -40,19 +40,26 @@
             </a>
             <h4 class="account-content__title mb-48 text-capitalize">Welcome Back!</h4>
 
-            <form action="#">
+            <form (ngSubmit)="onSubmit()">
                 <div class="row gy-4">
                     <div class="col-12">
                         <label for="email" class="form-label mb-2 font-18 font-heading fw-600">Email</label>
                         <div class="position-relative">
-                            <input type="email" class="common-input common-input--bg common-input--withIcon" id="email" placeholder="infoname@mail.com">
+                            <input type="email" class="common-input common-input--bg common-input--withIcon" id="email"
+                            name="email"
+                            [(ngModel)]="email"
+                            placeholder="infoname@mail.com">
+                            
                             <span class="input-icon"><img src="assets/images/icons/envelope-icon.svg" alt=""></span>
                         </div>
-                    </div>
+
                     <div class="col-12">
                         <label for="your-password" class="form-label mb-2 font-18 font-heading fw-600">Password</label>
                         <div class="position-relative">
-                            <input type="password" class="common-input common-input--bg common-input--withIcon" id="your-password" placeholder="6+ characters, 1 Capital letter">
+                            <input type="password" class="common-input common-input--bg common-input--withIcon" id="password"
+                            name="password"
+                            [(ngModel)]="password"
+                            placeholder="6+ characters, 1 Capital letter">
                             <span class="input-icon toggle-password cursor-pointer" id="#your-password"><img src="assets/images/icons/lock-icon.svg" alt=""></span>
                         </div>
                     </div>
@@ -80,6 +87,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </form>
         </div>
     </div>
