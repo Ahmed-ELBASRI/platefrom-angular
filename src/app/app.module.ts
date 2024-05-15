@@ -28,6 +28,7 @@ import { PageNavigationComponent } from './all-products/products/page-navigation
 import { FilterComponent } from './all-products/products/filters/filter/filter.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactEmailComponent } from './contact/contact-email/contact-email.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { ContactEmailComponent } from './contact/contact-email/contact-email.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   exports: [
     
