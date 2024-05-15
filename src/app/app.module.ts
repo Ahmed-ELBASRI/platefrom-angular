@@ -29,6 +29,7 @@ import { FilterComponent } from './all-products/products/filters/filter/filter.c
 import { ContactComponent } from './contact/contact.component';
 import { ContactEmailComponent } from './contact/contact-email/contact-email.component';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -63,10 +64,11 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   exports: [
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
