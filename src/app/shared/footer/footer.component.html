@@ -11,7 +11,7 @@
                     <div class="footer-item__logo">
                         <a href="index.html"> <img src="assets/images/logo/mkshop.png" alt=""></a>
                     </div>
-                    <p class="footer-item__desc">Lorem consultancy elitsed do eiusmod tempor inci didunt ut labore dolore magna aliqua sed do eiusmod.</p>                    
+                    <p class="footer-item__desc">Lorem consultancy elitsed do eiusmod tempor inci didunt ut labore dolore magna aliqua sed do eiusmod.</p>
                     <div class="footer-item__social">
                         <ul class="social-list">
     <li class="social-list__item">
@@ -62,8 +62,10 @@
                 <div class="footer-item">
                     <h5 class="footer-item__title">Subscribe</h5>
                     <p class="footer-item__desc">Subscribe our newsletter to get updated the latest news</p>
-                    <form action="#" class="mt-4 subscribe-box d-flex align-items-center flex-column gap-2">
-                        <input type="text" class="form-control common-input pill text-white" placeholder="Enter Mail">
+                    <form (ngSubmit)="onSubmit()" class="mt-4 subscribe-box d-flex align-items-center flex-column gap-2">
+                        <input type="text" class="form-control common-input pill text-white" placeholder="Enter Mail" name="Email"
+                        [(ngModel)]="Email"
+                        >
                         <button type="submit" class="btn btn-main btn-lg w-100 pill">Subscribe Now</button>
                     </form>
                 </div>

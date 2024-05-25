@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BottomFooterComponent } from './bottom-footer/bottom-footer.component';
 import { SaleOfferComponent } from './sale-offer/sale-offer.component';
 import { AppRoutingModule } from '../app-routing.module';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -15,10 +16,11 @@ import { AppRoutingModule } from '../app-routing.module';
     BottomFooterComponent,
     SaleOfferComponent,
   ],
-  imports: [
-    CommonModule,
-    AppRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   exports: [
     HeaderComponent,
     FooterComponent,
