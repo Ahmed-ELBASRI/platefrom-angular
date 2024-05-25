@@ -11,16 +11,16 @@
 
             <!-- Menu Start  -->
             <div class="header-menu d-lg-block d-none">
-                 
+
 <ul class="nav-menu flx-align ">
     <li class="nav-menu__item">
-        <a routerLink="" class="nav-menu__link">Home</a>
+        <a routerLink="" class="nav-menu__link">{{'Home' | translate}}</a>
     </li>
     <li class="nav-menu__item">
-        <a routerLink="/services" class="nav-menu__link">Services</a>
+        <a routerLink="/services" class="nav-menu__link">{{'Services' | translate}}</a>
     </li>
     <li class="nav-menu__item">
-        <a routerLink="/contact" class="nav-menu__link">Contact</a>
+        <a routerLink="/contact" class="nav-menu__link">{{'Contact' | translate}}</a>
     </li>
 </ul>
             </div>
@@ -29,20 +29,18 @@
             <!-- Header Right start -->
             <div class="header-right flx-align">
     <div class="header-right__inner gap-3 flx-align d-lg-flex d-none">
-        
+
     <a routerLink="/register" class="btn btn-main pill">
-        <span class="icon-left icon"> 
+        <span class="icon-left icon">
             <img src="assets/images/icons/user.svg" alt="">
-        </span>Create Account  
+        </span>{{'Create Account' | translate}}
     </a>
     <div class="language-select flx-align select-has-icon">
         <img src="assets/images/icons/globe.svg" alt="" class="globe-icon">
-        <select class="select py-0 ps-2 border-0 fw-500">
-            <option value="1">Eng</option>
-            <option value="2">Bn</option>
-            <option value="3">Eur</option>
-            <option value="4">Urd</option>
-        </select>
+      <select class="select py-0 ps-2 border-0 fw-500" #languageSelect (change)="switchLanguage(languageSelect.value)">
+        <option value="en">Eng</option>
+        <option value="fr">Fr</option>
+      </select>
     </div>
     </div>
     <button type="button" class="toggle-mobileMenu d-lg-none"> <i class="las la-bars"></i> </button>
