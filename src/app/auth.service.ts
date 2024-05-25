@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {LoginDto} from "./Dtos/loginDto";
 import {registerDto} from "./Dtos/registerDto";
+import {AdminLoginDto} from "./Dtos/AdminLoginDto";
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +22,13 @@ export class AuthService {
   register(registerDto : registerDto) : Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/LoginVendeur/register`, registerDto);
   }
+
+
+  loginAdmin(loginDto: AdminLoginDto): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/Admin`, loginDto);
+  }
+
+
 
 
 

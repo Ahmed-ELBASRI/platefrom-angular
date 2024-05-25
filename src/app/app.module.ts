@@ -30,6 +30,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ContactEmailComponent } from './contact/contact-email/contact-email.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -65,7 +67,9 @@ import {HttpClientModule} from "@angular/common/http";
     AppRoutingModule,
     SharedModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   exports: [
 
