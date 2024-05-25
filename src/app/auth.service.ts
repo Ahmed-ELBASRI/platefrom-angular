@@ -5,6 +5,7 @@ import {LoginDto} from "./Dtos/loginDto";
 import {registerDto} from "./Dtos/registerDto";
 import {AdminLoginDto} from "./Dtos/AdminLoginDto";
 import {NewLetterDto} from "./Dtos/NewLetterDto";
+import {environment} from "./environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class AuthService {
   constructor(private http : HttpClient) { }
 
 
-  private apiUrl = 'https://localhost:7100/api';
+  private apiUrl = environment.apiUrl;
 
   login(loginDto: LoginDto): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/LoginVendeur`, loginDto);
