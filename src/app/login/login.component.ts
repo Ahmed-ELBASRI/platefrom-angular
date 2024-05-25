@@ -1,16 +1,33 @@
-import { Component } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {AuthService} from "../auth.service";
 import {LoginDto} from "../Dtos/loginDto";
 import {MatSnackBar} from '@angular/material/snack-bar'
 import {AdminLoginDto} from "../Dtos/AdminLoginDto";
+import {TranslateService} from "@ngx-translate/core";
+import {LanguageServiceService} from "../language-service.service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  constructor(private authService : AuthService, private _snackBar : MatSnackBar) {
+export class LoginComponent implements OnInit,OnDestroy{
+  constructor(private authService : AuthService, private _snackBar : MatSnackBar,private languageService: LanguageServiceService, private translate: TranslateService) {
+  }
+
+  currentLanguage!: string;
+  private languageSubscription!: Subscription;
+
+  ngOnInit() {
+    this.languageSubscription = this.languageService.currentLanguage$.subscribe(language => {
+      this.currentLanguage = language;
+      this.translate.use(language);
+    });
+  }
+
+  ngOnDestroy() {
+    this.languageSubscription.unsubscribe();
   }
 
   email : string ='';
