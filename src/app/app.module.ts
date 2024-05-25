@@ -82,7 +82,7 @@ import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
   exports: [
 
   ],
-  providers: [],
+  providers: [Location],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

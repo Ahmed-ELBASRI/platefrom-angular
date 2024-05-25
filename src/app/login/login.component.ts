@@ -6,6 +6,10 @@ import {AdminLoginDto} from "../Dtos/AdminLoginDto";
 import {TranslateService} from "@ngx-translate/core";
 import {LanguageServiceService} from "../language-service.service";
 import {Subscription} from "rxjs";
+import { environment } from '../environments/environment';
+import {Router} from "@angular/router";
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-login',
@@ -13,7 +17,7 @@ import {Subscription} from "rxjs";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit,OnDestroy{
-  constructor(private authService : AuthService, private _snackBar : MatSnackBar,private languageService: LanguageServiceService, private translate: TranslateService) {
+  constructor(private authService : AuthService, private _snackBar : MatSnackBar,private languageService: LanguageServiceService, private translate: TranslateService,private router: Router,private location: Location) {
   }
 
   currentLanguage!: string;
@@ -36,6 +40,7 @@ export class LoginComponent implements OnInit,OnDestroy{
 
 
   onSubmit() {
+    const apiUrl =environment.apiUrlDashboard;
 
     if (this.userType == 'user') {
       const loginDto : LoginDto={email_Vendeur : this.email,password : this.password};
@@ -46,6 +51,9 @@ export class LoginComponent implements OnInit,OnDestroy{
           const token = response.token;
           // Store the token in localStorage
           localStorage.setItem('token', token);
+
+
+          this.location.go(apiUrl);
 
 
           this._snackBar.open('user not found', 'close', {
@@ -75,6 +83,12 @@ export class LoginComponent implements OnInit,OnDestroy{
           const token = response.token;
           // Store the token in localStorage
           localStorage.setItem('token', token);
+
+        //  this.router.navigateByUrl(environment.apiUrlDashboard);
+
+          this.location.go(apiUrl);
+
+
 
 
           this._snackBar.open('user not found', 'close', {
