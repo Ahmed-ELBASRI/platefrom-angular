@@ -1,30 +1,25 @@
 <div class="blog-item">
   <div class="blog-item__thumb">
     <a href="blog-details.html" class="link">
-      <!-- <img src="assets/images/thumbs/blog1.png" class="cover-img" alt=""/> -->
       <img src="assets/images/gradients/testimonial-bg.png" alt="" class="hover-bg visible opacity-100">
     </a>
   </div>
   <div class="blog-item__content">
     <div class="blog-item__top flx-align">
-      <a
-        href="blog.html"
-        class="blog-item__tag pill font-20 text-heading fw-500 hover-text-main" 
-        ><b>{{ plan }}</b></a
-      >
-      <div
-        class="blog-item__date font-14 flx-align gap-2 font-14 text-heading fw-500"
-      ></div>
+      <a href="blog.html" class="blog-item__tag pill font-20 text-heading fw-500 hover-text-main">
+        <b>{{ plan }}</b>
+      </a>
+      <div class="blog-item__date font-14 flx-align gap-2 font-14 text-heading fw-500"></div>
     </div>
     <h5 class="blog-item__title">
-      <a href="" class="link"
-        >{{planDescription}}</a
-      >
+      <ul>
+        <li><b>Price :</b> {{price}}</li>
+        <li><b>Store Setup :</b> {{storesetup}}</li>
+        <li><b>Produtcs :</b> {{products}}</li>
+        <li><b>Storage :</b> {{storage}}</li>
+        <li><b>Support :</b> {{support}}</li>
+      </ul>
+      <a href="" class="link">{{ planDescription }}</a>
     </h5>
-    <a href="blog-details.html" class="btn btn-outline-light pill fw-600"
-      >Choose plan
-    </a>
   </div>
 </div>
-
-

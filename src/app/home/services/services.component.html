@@ -17,22 +17,19 @@
     </div>
     <div class="row gy-4">
       <div class="col-lg-4 col-sm-6">
-        <app-service-item plan="Standard" planDescription="Store Setup: Basic store setup with customizable themes.
-        Products: Add up to 100 products.
-        Storage: 10 GB of storage space.
-        Support: Email support with a 48-hour response time.
-        Features:
-        Basic analytics and reporting.
-        Standard SEO tools.
-        Integration with up to 3 payment gateways.
-        Basic marketing tools including email marketing.
-        Access to a community forum for support and tips."></app-service-item>
+        <app-service-item 
+        plan="Standard" storesetup="Basic store setup with customizable themes." products="Add up to 100 products." storage="10 GB of storage space." support="Email support with a 48-hour response time.." price=" $29/month">
+      </app-service-item>
+      </div>    
+      <div class="col-lg-4 col-sm-6">
+        <app-service-item 
+        plan="Pro" storesetup="Advanced store setup with professional design templates." products="Add up to 1,000 products." storage="50 GB of storage space." support="Priority email support with a 24-hour response time." price=" $79/month">
+      </app-service-item>
       </div>
       <div class="col-lg-4 col-sm-6">
-        <app-service-item plan="Pro"></app-service-item>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <app-service-item plan="Premium"></app-service-item>
+        <app-service-item 
+          plan="Premium" storesetup="Full-service store setup with custom design and branding." products=" Unlimited products.." storage=" 200 GB of storage space." support="24/7 premium support with a dedicated account manager." price=" $199/month">
+        </app-service-item>
       </div>
     </div>
   </div>

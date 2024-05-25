@@ -1,0 +1,14 @@
+.blog-item__title {
+    white-space: normal;  /* Allow the text to wrap normally */
+    overflow: visible;    /* Ensure the container expands with content */
+    text-overflow: clip;  /* Prevent text truncation */
+  }
+  
+  .blog-item__content {
+    max-height: none;  /* Allow the content to expand fully */
+  }
+  
+  .blog-item__content a.link {
+    display: block;    /* Ensure the link takes up the full width */
+    white-space: normal;  /* Wrap text inside the link */
+  }
